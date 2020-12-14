@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pixel Testing</title>
+
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js?v=next&r=canary&debug=true&no_min=1');
+	fbq('init',987659254902270, {
+    em: 'foo@bar.com',
+    fn: 'foo',    // automatically by the pixel
+    ln: 'bar',
+    ln: 'bar',
+    external_id: 'test_id',
+    ge: 'm',
+    db: '19910526',
+    ct: 'MPK',
+    st: 'CA',
+    zp: '12345',
+    cn: 'USA'
+  });
+	fbq('track', 'Purchase', {
+    'subscription_id': 'sub123',
+    'currency': 'usd',
+    'value': '100',
+    'content_category': 'product',
+    'content_ids': ['ABC123', 'XYZ789'],
+    'content_name': 'SampleItem',
+    'content_type': 'product',
+    'contents': [{'id': 'ABC123', 'quantity': 2}, {'id': 'XYZ789', 'quantity': 2}],
+    'num_items': 4,
+    'predicted_ltv': 100,
+    'search_string': 'query',
+    'status': 'subscribed',
+  });
+/*
+  _fbq('track', 'Purchase', {
+    'currency': 'usd',
+    'value': '100',
+  },{
+    eventID: 'testEventId'
+  }
+  );
+  fbq('track', 'Subscribe', {
+     subscription_id: 'anid1234',
+     value: 988,
+     currency: 'USD',
+    });
+    */
+
+	</script>
+</head>
+
+
+<body>
+<p style="text-align: center">Welcome to Pixel Test Page</p>
+</body>
+</html>
